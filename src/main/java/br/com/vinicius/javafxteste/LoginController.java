@@ -17,6 +17,7 @@ public class LoginController implements Initializable {
 
     @FXML
     PasswordField senhaPasswordField; //metodo
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }
@@ -24,8 +25,7 @@ public class LoginController implements Initializable {
     @FXML
     void login() throws IOException {
         if (usuarioTextField.getText().equals("Vini")
-                && 
-                senhaPasswordField.getText().equals("123")) {
+                && senhaPasswordField.getText().equals("123")) {
             App.setRoot("primary");
         } else {
             Alert alert = new Alert(AlertType.INFORMATION);

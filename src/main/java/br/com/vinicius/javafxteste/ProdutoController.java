@@ -83,23 +83,21 @@ public class ProdutoController implements Initializable {
 
     @FXML
     void remover() throws IOException {
-       Produto produtoSelecionado = this.produtotable.getSelectionModel().getSelectedItem();
-        
-        
+        Produto produtoSelecionado = this.produtotable.getSelectionModel().getSelectedItem();
+
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Remover");
-        alert.setHeaderText(produtoSelecionado.getCodigo()+ " " + produtoSelecionado.getNome());
+        alert.setHeaderText(produtoSelecionado.getCodigo() + " " + produtoSelecionado.getNome());
         alert.setContentText("Deseja Remover o Registro ? ");
-        
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK) {
-                 
+
             //Remove prduto
             this.produtos.remove(produtoSelecionado);
-        
-        } 
-        
+
+        }
+
     }
 
     @FXML

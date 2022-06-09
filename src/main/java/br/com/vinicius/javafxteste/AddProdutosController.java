@@ -46,8 +46,8 @@ public class AddProdutosController implements Initializable {
     void salvar() {
         if (!this.textFieldCodigoProduto.getText().isEmpty()//
                 && !this.textFieldNomeProduto.getText().isEmpty()//
-                && !this.textFieldPrecoProduto.getText().isEmpty());{
-            
+                && !this.textFieldPrecoProduto.getText().isEmpty());
+        {
 
             produto = new Produto( //
                     Integer.parseInt(this.textFieldCodigoProduto.getText()), //

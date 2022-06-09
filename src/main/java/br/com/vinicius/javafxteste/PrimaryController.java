@@ -8,18 +8,15 @@ public class PrimaryController {
 
     @FXML
     private Button produtos;
-    
+
     @FXML
     private void switchToSecondary() throws IOException {
         App.setRoot("secondary");
     }
-    
-    @FXML 
+
+    @FXML
     void switchToProdutos() throws IOException {
         App.setRoot("produto");
     }
-    
-    
-    
-}
 
+}

@@ -1,14 +1,11 @@
-
 package br.com.vinicius.javafxteste;
 
-
 public class Produto {
-    
-    
+
     int codigo;
     String nome;
     double preco;
-    
+
     //Construtor
     public Produto(int codigo, String nome, double preco) {//alt+Insert
         this.codigo = codigo;
@@ -39,8 +36,5 @@ public class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
-    
-    
-    
-    
+
 }

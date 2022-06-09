@@ -28,14 +28,14 @@ public class App extends Application {
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));//trocar de tela
     }
-    
+
     static void showModal(String fxml) throws IOException {
         // Obtém a tela atual
         Window primaryStage = scene.getRoot().getScene().getWindow();
-        
+
         // Carrega a nova tela
         scene = new Scene(loadFXML(fxml));
-        
+
         // Abre o modal
         final Stage dialog = new Stage();
         dialog.initModality(Modality.APPLICATION_MODAL);
@@ -43,8 +43,7 @@ public class App extends Application {
         dialog.setScene(scene);
         dialog.showAndWait();
     }
-    
-    
+
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
@@ -53,9 +52,9 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-    
+
     static void closeCurrentWindow() { //fechar janela
         ((Stage) scene.getRoot().getScene().getWindow()).close();
-} 
+    }
 
 }
