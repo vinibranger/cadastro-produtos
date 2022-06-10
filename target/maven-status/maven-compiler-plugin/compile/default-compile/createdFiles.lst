@@ -1,4 +1,8 @@
-module-info.class
+br\com\vinicius\javafxteste\conectarBanco.class
+br\com\vinicius\javafxteste\AddProdutosController.class
+br\com\vinicius\javafxteste\ProdutoController.class
+br\com\vinicius\javafxteste\LoginController.class
 br\com\vinicius\javafxteste\PrimaryController.class
+br\com\vinicius\javafxteste\Produto.class
 br\com\vinicius\javafxteste\SecondaryController.class
 br\com\vinicius\javafxteste\App.class
