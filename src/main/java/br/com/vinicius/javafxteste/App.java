@@ -7,6 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javafx.stage.Modality;
 import javafx.stage.Window;
 
@@ -50,7 +53,30 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+//        launch();
+        try {
+            Connection connection = conectarBanco.getConnection();
+
+            Statement statement = connection.createStatement();
+
+            ResultSet queryResult = statement.executeQuery("SELECT * FROM produto");
+
+            queryResult.next();
+            int codigo = queryResult.getInt(1);
+            System.out.println(codigo);
+
+            String nome = queryResult.getString(2);
+            System.out.println(nome);
+
+            queryResult.previous();
+            nome = queryResult.getString(2);
+            System.out.println(nome);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+
+        }
     }
 
     static void closeCurrentWindow() { //fechar janela
